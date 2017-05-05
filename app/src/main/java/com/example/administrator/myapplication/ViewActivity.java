@@ -14,15 +14,7 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
         parent = (LinearLayout) findViewById(R.id.parent);
 
-        final MagicView mgv = (MagicView) findViewById(R.id.mg);
-        mgv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mgv.startAnimation();
-            }
-        });
-
-//        layout();
+        layout();
     }
 
     private void layout() {
@@ -36,6 +28,10 @@ public class ViewActivity extends AppCompatActivity {
                 MagicView mgv = new MagicView(ViewActivity.this);
                 parent.addView(mgv);
                 mgv.startAnimation();
+                break;
+            case 2:
+                RotateArr ra = new RotateArr(ViewActivity.this);
+                parent.addView(ra);
                 break;
         }
     }

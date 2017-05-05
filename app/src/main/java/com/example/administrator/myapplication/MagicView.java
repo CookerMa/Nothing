@@ -132,7 +132,8 @@ public class MagicView extends View {
         p2.setX(radius+stretchDistance*time*5);
     }
 
-    private void model2(float time){//0.2~0.5
+    private void model2(float time){
+        //0.2~0.5
         model1(0.2f);
         time = (time - 0.2f) * (10f / 3);
         p1.adjustAllX(stretchDistance/2 * time );
