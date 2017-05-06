@@ -2,10 +2,12 @@ package com.example.administrator.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.administrator.myapplication.Bezier.BubbleView;
+import com.example.administrator.myapplication.Paint.LotteryCard;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -38,6 +40,16 @@ public class ViewActivity extends AppCompatActivity {
             case 3:
                 BubbleView bv = new BubbleView(ViewActivity.this);
                 parent.addView(bv);
+                break;
+            case 4:
+                final LotteryCard lv = new LotteryCard(ViewActivity.this);
+                parent.addView(lv);
+                lv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        lv.saveBitmap();
+                    }
+                });
                 break;
         }
     }
