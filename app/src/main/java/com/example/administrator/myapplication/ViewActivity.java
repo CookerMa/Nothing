@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.administrator.myapplication.Bezier.BubbleView;
+
 public class ViewActivity extends AppCompatActivity {
 
     private LinearLayout parent;
@@ -32,6 +34,10 @@ public class ViewActivity extends AppCompatActivity {
             case 2:
                 RotateArr ra = new RotateArr(ViewActivity.this);
                 parent.addView(ra);
+                break;
+            case 3:
+                BubbleView bv = new BubbleView(ViewActivity.this);
+                parent.addView(bv);
                 break;
         }
     }
