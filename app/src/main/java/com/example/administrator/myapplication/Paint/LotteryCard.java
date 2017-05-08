@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.graphics.Xfermode;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -20,9 +19,7 @@ import android.view.View;
 import com.example.administrator.myapplication.R;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 /**
  * 刮刮卡

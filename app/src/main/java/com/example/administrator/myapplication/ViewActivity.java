@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import com.example.administrator.myapplication.Bezier.BubbleView;
 import com.example.administrator.myapplication.Paint.LotteryCard;
+import com.example.administrator.myapplication.Paint.YinYangView;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -50,6 +51,10 @@ public class ViewActivity extends AppCompatActivity {
                         lv.saveBitmap();
                     }
                 });
+                break;
+            case 5:
+                final YinYangView yy = new YinYangView(ViewActivity.this);
+                parent.addView(yy);
                 break;
         }
     }
